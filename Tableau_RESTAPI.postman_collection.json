@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "9f4e46f0-ff27-4197-9266-222151b7f7d1",
+		"name": "Tableau_RESTAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Tableau",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<tsRequest>\r\n  <credentials name=\"gunakala.amarnadh@outlook.com\" password=\"Amar@1994\" >\r\n    <site contentUrl=\"amargdev480119\" />\r\n  </credentials>\r\n</tsRequest>",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://10ax.online.tableau.com/api/3.4/auth/signin",
+					"protocol": "https",
+					"host": [
+						"10ax",
+						"online",
+						"tableau",
+						"com"
+					],
+					"path": [
+						"api",
+						"3.4",
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Project",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Tableau-Auth",
+						"value": "A98NVRncR4SoZ_VXW_BtUw|A7tUvYasJgt8Gh6kLrA8DRq3cmyinRE6",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<tsRequest>\r\n  <project name=\"AmarProg\" description=\"This is my Test Proj\" />\r\n</tsRequest>"
+				},
+				"url": {
+					"raw": "https://10ax.online.tableau.com/api/3.4/sites/620caa8b-ab01-455e-901b-9164dee04c5b/projects",
+					"protocol": "https",
+					"host": [
+						"10ax",
+						"online",
+						"tableau",
+						"com"
+					],
+					"path": [
+						"api",
+						"3.4",
+						"sites",
+						"620caa8b-ab01-455e-901b-9164dee04c5b",
+						"projects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListAllProjects",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}
