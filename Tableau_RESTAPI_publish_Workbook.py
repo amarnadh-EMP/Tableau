@@ -12,12 +12,12 @@ site = '620caa8b-ab01-455e-901b-9164dee04c5b'
 tableau_auth=T.TableauAuth("gunakala.amarnadh@outlook.com","XXXX",site)
 
 with Server.auth.sign_in(tableau_auth):
-    new_Workbook=T.WorkbookItem(name="test",project_id='')
+    new_Workbook=T.WorkbookItem(name="Loan_Visualisation",project_id='')
     publish_mode=T.Server.PublishMode.CreateNew
    
     overwrite_true = T.Server.PublishMode.Overwrite
     #Publishing into my tableau
-    my_Workbook=server.Workbooks.publish(new_Workbook,overwrite_true,"./Test.twbx" , publish_mode)
+    my_Workbook=server.Workbooks.publish(new_Workbook,overwrite_true,"C:\\Users\\gunak\\Desktop\\tableau\\Loan_Visualisation.twbx" , publish_mode)
 
     print("Workbook published. JOB ID: {0}".format(my_Workbook.id))
 
