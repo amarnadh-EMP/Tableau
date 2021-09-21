@@ -1,3 +1,5 @@
 https://public.tableau.com/profile/amarnadh004#!/vizhome/Loan_Visualisation/Loan_Segment?publish=yes
 https://10ax.online.tableau.com/#/site/amargdev480119/workbooks/73781?:origin=card_share_link
 https://github.com/amarnadh-EMP/Tableau/tree/main
+
+
